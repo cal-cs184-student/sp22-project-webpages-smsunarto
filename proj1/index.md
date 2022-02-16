@@ -13,4 +13,11 @@ title: Project 1 - Rasterizer
 
 # Task 5
 
+Pixel sampling refers to the method by which pixel values are chosen for various graphical uses, from color to, in this case, texture. Nearest PSM is a basic method that takes the nearest point on the texture map to our sampled point. Bilinear interpolates several points to create a more blended, combined view of a texture. 
+
+<img width="801" alt="Screen Shot 2022-02-15 at 7 30 35 PM" src="https://user-images.githubusercontent.com/12012798/154191264-48157022-c0ea-4e22-9ddc-300f382ace5c.png">
+<img width="799" alt="Screen Shot 2022-02-15 at 7 30 40 PM" src="https://user-images.githubusercontent.com/12012798/154191279-42b259b7-1fe8-4c1b-b8c6-f0c49b0da4ac.png">
+
+This example between 16 spp for bilinear vs. nearest most demonstrates their difference. Bilinear smoothly blends between the colors of the texture, while nearest cuts sharp edges.
+
 # Task 6
