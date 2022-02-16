@@ -1,19 +1,19 @@
 ---
 layout: default
-title: { { site.name } }
+title: CS 184 - 0xtuba Team
 ---
 
 <h3>CS184/284A Project Webpages</h3>
 <br /><br />
-<a href="/proj1/index.html">Project 1</a>
+<a href="/proj1/">Project 1</a>
 <br /><br />
-<a href="/proj2/index.html">Project 2</a>
+<a href="/proj2/">Project 2</a>
 <br /><br />
-<a href="/proj3-1/index.html">Project 3-1</a>
+<a href="/proj3-1/">Project 3-1</a>
 <br /><br />
-<a href="/proj3-2/index.html">Project 3-2</a>
+<a href="/proj3-2/">Project 3-2</a>
 <br /><br />
-<a href="/proj4/index.html">Project 4</a>
+<a href="/proj4/">Project 4</a>
 
 <script>
   var links = document.body.getElementsByTagName("a");
