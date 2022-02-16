@@ -18,9 +18,45 @@ This method performs no worse than one that one that checks each sample within t
 - We bounded the area that we need to iterate through to at most the bounding box of the triangle.
 - For each sample, we only perform one check: the center of the pixel.
 
+![task1](/img/task1.png)
+
 # Task 2
 
+In task 2, we implemented the supersampling algortithm. To do this, we need to make several changes in our rasterization piple.
+
+First and foremost, during the rasterization of the triangle, we added 2 additional loops to subsample horizontally and vertically for each pixel. Instead of checking only once per pixel, the number of sampling in supersampling changes with the sampling rate. As a result, the offset for each subsample differ based on the sampling rate. That said, it takes a subsample evenly on a pixel.
+
+For each subsample, we do the same check as task 1 to determine whether it's inside a triangle. If it's inside the triangle, we would set it to the corresponding color. The interesting part here is with regards to how we store the image in the scaled sample buffer.
+
+In our case, we perform it using the following structure:
+
+```
+sample_buffer[(y * N + j) * (width * N) + (x * N + i)]
+```
+
+We adjusted `fill_pixel` to fill the scaled samper buffer using the same data structure to also make sure that points and lines draws correctly. On top of that, we also adjusted `set_sample_rate` and `set_framebuffer_target` to resize the sample buffer accordingly based on the sample rate.
+
+Last but not least, we modify the `resolve_to_framebuffer` function to make sure it works with our new data structure. Additionally, when supersampling is active, we would calculate the average color of the subsamples before setting the color to the frame buffer.
+
+Supersampling helps in antialiasing the triangle by blurring the sharp edges or jaggies that is normally visible without supersampling.
+
+![task2](/img/task2-1.png)
+![task2](/img/task2-2.png)
+![task2](/img/task2-3.png)
+![task2](/img/task2-4.png)
+
 # Task 3
+
+![task3](/img/task3-1.svg)
+![task3](/img/task3-2.svg)
+
+Title: "Steve jobs waves to the crowd"
+
+We made several modifications to the cubeman.
+
+1. We removed the rotation on the head so it's no longer tilting
+2. We rotated one of the arm by -70 degrees to emulate a resting position an made translation adjustments to make it connected to the torso.
+3. We rotated the other arm by -10 degrees, rotated the lower part of that arm an additional -60 degrees, and then do translation adjustments for aesthetics.
 
 # Task 4
 
