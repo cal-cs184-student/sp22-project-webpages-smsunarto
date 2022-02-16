@@ -1,6 +1,6 @@
 ---
 layout: default
-title; {{ site.name }}
+title: { { site.name } }
 ---
 
 <h3>CS184/284A Project Webpages</h3>
