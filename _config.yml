@@ -1,1 +1,12 @@
+# Setup
+title: CS 184 - 0xtuba Team
+tagline: CS 184 Project Submission
+locale: "en"
+
+# Gems
+gems:
+  - jekyll-paginate
+
+#Others
+markdown: kramdown
 theme: jekyll-theme-cayman
