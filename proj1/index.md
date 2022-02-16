@@ -48,7 +48,7 @@ Supersampling helps in antialiasing the triangle by blurring the sharp edges or 
 # Task 3
 
 ![task3](/img/task3-1.svg)
-![task3](/img/task3-2.svg)
+![task3](/img/task3-2.png)
 
 Title: "Steve jobs waves to the crowd"
 
