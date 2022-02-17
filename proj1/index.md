@@ -76,7 +76,7 @@ Barycentric coordinates is a coordinate system in which the position is measured
 
 For example, in this triangle, the bottom left vertex correspond to the color red, the bottom right vertex correspond to the color green, and the top vertex correspond to the color blue.
 
-![task4](task4-1.jpeg)
+![task4](/img/task4-1.jpeg)
 
 Our implementation:
 
