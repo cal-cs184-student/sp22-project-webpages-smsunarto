@@ -76,10 +76,13 @@ If it intersects, we can fetch the emission by calling `bsdf->get_emissions` met
 At every iteration of the light object, we recalculate the average and at the end of the function, we return the accumulated irradiance from the lights of the scene.
 
 _Both done with the same parameters `-t 8 -s 16 -l 8 -m 6`_
+
 **Uniform sampling across hemisphere**
+
 ![part3](/img/part3-1h.png)
 
 **Importance sampling**
+
 ![part3](/img/part3-1i.png)
 
 We can easily tell that even with the same parameters, the result from the importance sampling is significantly less grainy than the result from our uniform sampling across the hemisphere.
@@ -114,3 +117,7 @@ We implement this by adding the `illuminationAccumulator` and `illumination2Accu
 
 ![part5](/img/bunny.png)
 ![part4](/img/bunny_rate.png)
+
+# Collaboration
+
+We collaborated through a combination of synchronous and asynchronous work. Whenever we encountered a problem, we would try to "rubber duck" the problem to each other.
